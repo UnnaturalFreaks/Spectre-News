@@ -1,0 +1,72 @@
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+@font-face {
+  font-family: 'Destroyed Aero'; /* This can be any name you choose */
+  src: url('fonts/Destroyed Aero.ttf') format('truetype'),
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #797979;
+  padding: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Destroyed Aero', fallback, sans-serif;
+  letter-spacing: 0.15em;
+}
+
+header, footer {
+  text-align: center;
+  font-size: 125%;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around; /* This will distribute the space around the items */
+  padding: 0 10%; /* Add padding to the left and right of the image container */
+}
+
+.image-container figure {
+  width: 100%; /* Adjust this to control the width of the images and their captions */
+}
+
+.image-container img {
+  width: 100%; /* This will make the images take up the full width of their parent figure element */
+}
+
+.image-container figcaption {
+  text-align: center;
+}
+
+.line {
+  height: 1px; 
+  background-color: #000000; 
+  width: 75%; 
+  margin: auto; 
+}
+
+main p {
+  padding-top: 5px;
+  padding-right: 200px;
+  padding-bottom: 5px;
+  padding-left: 200px;
+}
+
+footer {
+  text-align: center;
+  background-color: #000000;
+  padding: 2vh 5vw; /* 2% of the viewport height and 5% of the viewport width */
+}
+
+footer p {
+  color: #ffffff;
+  margin: 0;
+  padding: 0 20vw; /* Changed to 5% of the viewport width */
+  font-size: 70%;
+}
