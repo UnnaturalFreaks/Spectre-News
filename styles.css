@@ -4,16 +4,33 @@ body {
 }
 
 @font-face {
-  font-family: 'Destroyed Aero'; /* This can be any name you choose */
-  src: url('fonts/Destroyed Aero.ttf') format('truetype'),
+  font-family: 'Destroyed Aero';
+  src: url('fonts/Destroyed Aero.ttf') format('truetype');
 }
 
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #797979;
+  background-color: #000000;
   padding: 10px;
+  border-top: 2px solid #0e7518;
+  border-bottom: 2px solid #0e7518;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
+header p {
+  color: #ffffff;
+  font-family: 'Destroyed Aero', fallback, sans-serif;
+  margin: 0;
+  font-size: 300%;
+  letter-spacing: 0.15em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,23 +38,19 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.15em;
 }
 
-header, footer {
-  text-align: center;
-  font-size: 125%;
-}
 
 .image-container {
   display: flex;
-  justify-content: space-around; /* This will distribute the space around the items */
-  padding: 0 10%; /* Add padding to the left and right of the image container */
+  justify-content: space-around;
+  padding: 0 8%;
 }
 
 .image-container figure {
-  width: 100%; /* Adjust this to control the width of the images and their captions */
+  width: 100%;
 }
 
 .image-container img {
-  width: 100%; /* This will make the images take up the full width of their parent figure element */
+  width: 100%;
 }
 
 .image-container figcaption {
@@ -45,28 +58,54 @@ header, footer {
 }
 
 .line {
-  height: 1px; 
-  background-color: #000000; 
-  width: 75%; 
-  margin: auto; 
+  height: 1px;
+  background-color: #000000;
+  width: 75%;
+  margin: auto;
 }
 
-main p {
-  padding-top: 5px;
-  padding-right: 200px;
-  padding-bottom: 5px;
-  padding-left: 200px;
+.columns {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 200px;
+}
+
+.left-column {
+  width: 70%;
+  padding: 20px 40px;
+}
+
+.left-column p {
+  text-align: justify;
+  align-items: center;
+}
+
+.right-column {
+  width: 30%;
+  padding: 20px 40px;
+}
+
+.right-column img {
+  max-width: 100%; /* This will ensure the image does not exceed the width of its container */
+  display: block; /* This makes the image a block element, which allows us to use auto margins for centering */
+  margin: auto; /* This will center the image */
+}
+
+figure h5 + p {
+  margin-top: 0px; /* Adjust this value to increase or decrease the space */
+  text-align: justify;
+  align-items: center;
 }
 
 footer {
   text-align: center;
   background-color: #000000;
-  padding: 2vh 5vw; /* 2% of the viewport height and 5% of the viewport width */
+  padding: 2vh 5vw;
 }
 
 footer p {
   color: #ffffff;
   margin: 0;
-  padding: 0 20vw; /* Changed to 5% of the viewport width */
-  font-size: 70%;
+  padding: 0 20vw;
+  font-size: 80%;
 }
