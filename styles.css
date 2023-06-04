@@ -14,8 +14,6 @@ header {
   align-items: center;
   background-color: #000000;
   padding: 10px;
-  border-top: 2px solid #0e7518;
-  border-bottom: 2px solid #0e7518;
 }
 
 .header-content {
@@ -82,13 +80,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .right-column {
   width: 30%;
-  padding: 20px 40px;
+  padding: 5px 5px;
 }
 
 .right-column img {
   max-width: 100%; /* This will ensure the image does not exceed the width of its container */
   display: block; /* This makes the image a block element, which allows us to use auto margins for centering */
   margin: auto; /* This will center the image */
+}
+
+.padded-paragraph {
+  padding-left: 120px;  /* adjust these values as needed */
+  padding-right: 120px;
+  margin: 40px; 
+  text-align: justify;
 }
 
 figure h5 + p {
