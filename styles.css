@@ -1,6 +1,9 @@
 body {
   background-color: #ffffff;
   color: #000000;
+  font-size: 16px;  /* This will be the base font size */
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {
@@ -19,14 +22,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
+  width: 90%;  /* Reduce to fit on smaller screens */
 }
 
 header p {
   color: #ffffff;
   font-family: 'Destroyed Aero', fallback, sans-serif;
   margin: 0;
-  font-size: 300%;
+  font-size: 1.5em;  /* Reduce to fit on smaller screens */
   letter-spacing: 0.15em;
 }
 
@@ -35,11 +38,11 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.15em;
 }
 
-
 .image-container {
   display: flex;
-  justify-content: space-around;
-  padding: 0 8%;
+  flex-direction: column;  /* Stack images vertically on smaller screens */
+  align-items: center;  /* Center images on smaller screens */
+  padding: 0 5%;  /* Reduce padding on smaller screens */
 }
 
 .image-container figure {
@@ -57,52 +60,45 @@ h1, h2, h3, h4, h5, h6 {
 .line {
   height: 1px;
   background-color: #000000;
-  width: 75%;
+  width: 100%;  /* Full width on smaller screens */
   margin: auto;
 }
 
 .columns {
   display: flex;
-  justify-content: space-between;
-  padding: 0 200px;
+  flex-direction: column;  /* Stack columns vertically on smaller screens */
+  align-items: center;  /* Center columns on smaller screens */
+  padding: 0 5%;  /* Reduce padding on smaller screens */
 }
 
-.left-column {
-  width: 70%;
-  padding: 20px 40px;
+.left-column, .right-column {
+  width: 100%;  /* Full width on smaller screens */
+  padding: 20px 0;
 }
 
 .left-column p {
   text-align: justify;
-  align-items: center;
-}
-
-.right-column {
-  width: 30%;
-  padding: 5px 5px;
 }
 
 .right-column img {
-  max-width: 100%; /* This will ensure the image does not exceed the width of its container */
-  display: block; /* This makes the image a block element, which allows us to use auto margins for centering */
-  margin: auto; /* This will center the image */
+  max-width: 100%;
+  display: block;
+  margin: auto;
 }
 
 .padded-paragraph {
-  padding-left: 120px;  /* adjust these values as needed */
-  padding-right: 120px;
-  margin: 40px; 
+  padding: 10px 5%;  /* Change to a percentage for more flexibility */
+  margin: 15px; 
   text-align: justify;
 }
 
 figure h5 + p {
-  margin-top: 0px; /* Adjust this value to increase or decrease the space */
+  margin-top: 0px;
   text-align: justify;
-  align-items: center;
 }
 
 main {
-  padding-bottom: 60px;  /* Adjust this value to the height of your footer */
+  padding-bottom: 60px;
 }
 
 footer {
@@ -122,6 +118,49 @@ footer {
 footer p {
   color: #ffffff;
   margin: 0;
-  padding: 0 20vw;
+  padding: 0 10px;  /* Add some padding on smaller screens */
   font-size: 80%;
+}
+
+/* Media queries for screens larger than 480px */
+@media screen and (min-width: 481px) {
+  .header-content {
+    width: 70%;
+  }
+
+  header p {
+    font-size: 300%;
+  }
+
+  .image-container {
+    flex-direction: row;
+    padding: 0 8%;
+ }
+
+.columns {
+  flex-direction: row;
+  padding: 0 10%;  /* Increase padding on larger screens */
+}
+
+.left-column, .right-column {
+  width: 45%;  /* Adjust widths for larger screens */
+}
+
+.left-column p {
+  align-items: center;
+}
+
+.right-column img {
+  max-width: 100%;
+}
+
+.padded-paragraph {
+  padding-left: 120px;  /* adjust these values as needed */
+  padding-right: 120px;
+  margin: 40px; 
+}
+
+footer p {
+  padding: 0 20vw;  /* Add more padding on larger screens */
+}
 }
