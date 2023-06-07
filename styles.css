@@ -155,9 +155,10 @@ footer p {
 }
 
 .padded-paragraph {
-  padding-left: 120px;  /* adjust these values as needed */
-  padding-right: 120px;
+  padding-left: 100px;  /* adjust these values as needed */
+  padding-right: 100px;
   margin: 40px; 
+  font-size: 8px;
 }
 
 footer p {
